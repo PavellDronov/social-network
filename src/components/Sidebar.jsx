@@ -61,7 +61,7 @@ const Sidebar = () => {
                             <ListItemIcon>
                                 <GroupIcon />
                             </ListItemIcon>
-                            <ListItemText primary='Группы' />
+                            <ListItemText primary='Друзья' />
                         </ListItem>
                         <ListItem button key='5'>
                             <ListItemIcon>

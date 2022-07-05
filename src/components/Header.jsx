@@ -6,6 +6,8 @@ import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Toolbar from '@material-ui/core/Toolbar';
+import SettingsIcon from '@material-ui/icons/Settings';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { makeStyles } from '@material-ui/core/styles';
 
 
@@ -31,7 +33,7 @@ const Header = () => {
         <AppBar position='fixed' className={classes.appBar}>
                 <Toolbar className='header__content'>
                     <Typography variant='h6' noWrap>
-                        Eight.Social
+                        Network
                     </Typography>
                     <Button
                         aria-controls='simple-menu'
@@ -46,10 +48,17 @@ const Header = () => {
                         keepMounted
                         open={Boolean(anchorEl)}
                         onClose={handleClose}
+                        className='popup-menu'
                     >
-                        <MenuItem onClick={handleClose}>Profile</MenuItem>
-                        <MenuItem onClick={handleClose}>My account</MenuItem>
-                        <MenuItem onClick={handleClose}>Logout</MenuItem>
+                        {/* <MenuItem onClick={handleClose}>Profile</MenuItem> */}
+                        <MenuItem onClick={handleClose}>
+                            <SettingsIcon/>
+                            <Typography variant="inherit">Настройки</Typography>
+                        </MenuItem>
+                        <MenuItem onClick={handleClose}>
+                            <ExitToAppIcon/>
+                            <Typography variant="inherit">Выйти</Typography>
+                        </MenuItem>
                     </Menu>
                     
                 </Toolbar>
