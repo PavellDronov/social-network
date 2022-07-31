@@ -45,7 +45,7 @@ const Sidebar = () => {
                             </ListItemIcon>
                             <ListItemText primary='Моя страница' />
                         </ListItem>
-                        <ListItem button key='2'>
+                        <ListItem key='2'>
                             <ListItemIcon>
                                 <CallToActionIcon />
                             </ListItemIcon>
