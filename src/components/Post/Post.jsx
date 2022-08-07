@@ -1,18 +1,21 @@
-import Typography from '@material-ui/core/Typography';
+// import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 
-const Post = () => {
+const Post = ({text, groupName}) => {
+    const createMarkup = () => {
+        return {__html: text}
+    }
     return (
         <div className='post'>
             <div className='post__header'>
                 <Avatar alt='Remy Sharp' src='./static/images/1.jpg' />
                 <div className='post__info'>
-                    <div className='post__author'>Пикабу</div>
+                    <div className='post__author'>{groupName}</div>
                     <div className='post__date'>час назад</div>
                 </div>
             </div>
-            <div className='post__content'>
-                <Typography paragraph>
+            <div className='post__content' dangerouslySetInnerHTML={createMarkup()}>
+                {/* <Typography paragraph>
                     Где-то с месяц назад на даче ремонтировал садовую тележку и
                     старый обод от колеса приставил к дому. Тут шел шел мимо,
                     смотрю, а под него шмели залетают. Решил посмотреть, сдвинул
@@ -33,7 +36,7 @@ const Post = () => {
                 <Typography paragraph>
                     Пришлось возвращать обод на место. Сразу и дом нашелся, и
                     насекомые успокоились...
-                </Typography>
+                </Typography> */}
             </div>
         </div>
     );

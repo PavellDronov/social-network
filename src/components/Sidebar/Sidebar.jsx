@@ -39,31 +39,31 @@ const Sidebar = () => {
                 <Toolbar />
                 <div className={classes.drawerContainer}>
                     <List className='sidebar-menu'>
-                        <ListItem button key='1'>
+                        <ListItem button component='a' href="/main" key='1'>
                             <ListItemIcon>
                                 <PersonIcon />
                             </ListItemIcon>
                             <ListItemText primary='Моя страница' />
                         </ListItem>
-                        <ListItem key='2'>
+                        <ListItem button component='a' href="/news" key='2'>
                             <ListItemIcon>
                                 <CallToActionIcon />
                             </ListItemIcon>
                             <ListItemText primary='Новости' />
                         </ListItem>
-                        <ListItem button key='3'>
+                        <ListItem button component='a' href="/chat" key='3'>
                             <ListItemIcon>
                                 <ChatIcon />
                             </ListItemIcon>
                             <ListItemText primary='Чат' />
                         </ListItem>
-                        <ListItem button key='4'>
+                        <ListItem button component='a' href="/friends" key='4'>
                             <ListItemIcon>
                                 <GroupIcon />
                             </ListItemIcon>
                             <ListItemText primary='Друзья' />
                         </ListItem>
-                        <ListItem button key='5'>
+                        <ListItem button component='a' href="/music" key='5'>
                             <ListItemIcon>
                                 <MusicNoteIcon />
                             </ListItemIcon>
