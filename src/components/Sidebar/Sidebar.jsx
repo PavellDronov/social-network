@@ -39,7 +39,7 @@ const Sidebar = () => {
                 <Toolbar />
                 <div className={classes.drawerContainer}>
                     <List className='sidebar-menu'>
-                        <ListItem button component='a' href="/main" key='1'>
+                        <ListItem button component='a' href="/profile" key='1'>
                             <ListItemIcon>
                                 <PersonIcon />
                             </ListItemIcon>

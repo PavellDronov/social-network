@@ -6,6 +6,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import News from './components/News/News';
 import Chat from './components/Chat/Chat';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import Profile from './components/Profile/Profile';
+import Music from './components/Music/Music';
+import Friends from './components/Friends/Friends';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -30,6 +33,9 @@ function App() {
                         <Route path='/' element={<News/>}/>
                         <Route path='news' element={<News/>}/>
                         <Route path='chat' element={<Chat/>}/>
+                        <Route path='profile' element={<Profile/>}/>
+                        <Route path='music' element={<Music/>}/>
+                        <Route path='friends' element={<Friends/>}/>
                     </Routes>
                 </main>
                 {/* <Content/> */}
