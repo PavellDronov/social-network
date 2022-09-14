@@ -10,6 +10,7 @@ import MusicNoteIcon from '@material-ui/icons/MusicNote';
 import GroupIcon from '@material-ui/icons/Group';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core/styles';
+import { NavLink } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -39,31 +40,32 @@ const Sidebar = () => {
                 <Toolbar />
                 <div className={classes.drawerContainer}>
                     <List className='sidebar-menu'>
-                        <ListItem button component='a' href="/profile" key='1'>
+                        {/* <NavLink/> */}
+                        <ListItem button component={NavLink} to="/profile" activeClassName="active-nav-link"  key='1'>
                             <ListItemIcon>
                                 <PersonIcon />
                             </ListItemIcon>
                             <ListItemText primary='Моя страница' />
                         </ListItem>
-                        <ListItem button component='a' href="/news" key='2'>
+                        <ListItem button component={NavLink} to="/news" activeClassName="active-nav-link"  key='2'>
                             <ListItemIcon>
                                 <CallToActionIcon />
                             </ListItemIcon>
                             <ListItemText primary='Новости' />
                         </ListItem>
-                        <ListItem button component='a' href="/chat" key='3'>
+                        <ListItem button component={NavLink} to="/chat" activeClassName="active-nav-link"  key='3'>
                             <ListItemIcon>
                                 <ChatIcon />
                             </ListItemIcon>
                             <ListItemText primary='Чат' />
                         </ListItem>
-                        <ListItem button component='a' href="/friends" key='4'>
+                        <ListItem button component={NavLink} to="/friends" activeClassName="active-nav-link"  key='4'>
                             <ListItemIcon>
                                 <GroupIcon />
                             </ListItemIcon>
                             <ListItemText primary='Друзья' />
                         </ListItem>
-                        <ListItem button component='a' href="/music" key='5'>
+                        <ListItem button component={NavLink} to="/music" activeClassName="active-nav-link"  key='5'>
                             <ListItemIcon>
                                 <MusicNoteIcon />
                             </ListItemIcon>

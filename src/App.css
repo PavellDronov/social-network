@@ -99,3 +99,18 @@ body {
 .post__date {
   color: #848484;
 }
+
+.dialog-items a {
+  color: #3f51b5;
+  transition: background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.dialog-items a:hover {
+  background-color: #c7c7c7;
+}
+
+.dialog-items a.active {
+  background-color: #3f51b5;
+  color: #fff;
+}

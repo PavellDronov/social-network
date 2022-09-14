@@ -9,6 +9,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import SettingsIcon from '@material-ui/icons/Settings';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { makeStyles } from '@material-ui/core/styles';
+import icon from '../../images/social-icon.png';
 
 
 const useStylesHeader = makeStyles((theme) => ({
@@ -40,7 +41,7 @@ const Header = () => {
                         aria-haspopup='true'
                         onClick={handleClick}
                     >
-                        <Avatar alt='Remy Sharp' src='./static/images/1.jpg' />
+                        <Avatar alt='Pavel Dronov' src={icon} />
                     </Button>
                     <Menu
                         id='simple-menu'

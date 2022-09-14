@@ -32,7 +32,7 @@ function App() {
                     <Routes>
                         <Route path='/' element={<News/>}/>
                         <Route path='news' element={<News/>}/>
-                        <Route path='chat' element={<Chat/>}/>
+                        <Route path='chat/*' element={<Chat/>} exact/>
                         <Route path='profile' element={<Profile/>}/>
                         <Route path='music' element={<Music/>}/>
                         <Route path='friends' element={<Friends/>}/>
