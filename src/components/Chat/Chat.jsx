@@ -1,37 +1,7 @@
 import { Grid, List, ListItem, ListItemText, Toolbar } from '@material-ui/core';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
-const dialogItems = [
-    {
-        name: 'Alexsandr Lepezin',
-        id: '1',
-    },
-    {
-        name: 'Алина Логинова',
-        id: '2',
-    },
-    {
-        name: 'Богдан Толистинов',
-        id: '3',
-    },
-    {
-        name: 'Ирина Кубракова',
-        id: '4',
-    },
-    {
-        name: 'Александр Буянов',
-        id: '5',
-    },
-    {
-        name: 'Полина Романова',
-        id: '6',
-    },
-    {
-        name: 'Анастасия Вострикова',
-        id: '7',
-    },
-];
+import mockData from '../mock-data/mock-data';
 
 const DialogItem = ({ name, id }) => {
     return (
@@ -41,7 +11,18 @@ const DialogItem = ({ name, id }) => {
     );
 };
 
+const Message = ({ content, id, me }) => {
+    const classNames = me ? 'messages__item messages__item--me' : 'messages__item';
+    return (
+        <div className={classNames} id={id}>
+            <p>{content}</p>
+        </div>
+    );
+};
+
 const Chat = () => {
+    const dialogItems = mockData.dialogItems;
+    const messageItems = mockData.messages;
     return (
         <div className='chat'>
             <Toolbar />
@@ -49,18 +30,16 @@ const Chat = () => {
                 <Grid item xs={3}>
                     <List className='dialog-items'>
                         {dialogItems.map(({ name, id }) => {
-                            return (
-                                <DialogItem
-                                    key={id}
-                                    name={name}
-                                    id={id}
-                                />
-                            );
+                            return <DialogItem key={id} name={name} id={id} />;
                         })}
                     </List>
                 </Grid>
                 <Grid item xs={9}>
-                    <p>Сообщения</p>
+                    <div className='messages'>
+                        {messageItems.map(({ content, id, me }) => {
+                            return <Message content={content} id={id} me={me}/>;
+                        })}
+                    </div>
                 </Grid>
             </Grid>
         </div>

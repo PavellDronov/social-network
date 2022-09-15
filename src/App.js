@@ -9,7 +9,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Profile from './components/Profile/Profile';
 import Music from './components/Music/Music';
 import Friends from './components/Friends/Friends';
-
+import { Container } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -26,21 +26,23 @@ function App() {
     return (
         <BrowserRouter>
             <div className={classes.root}>
-                <Header/>
-                <Sidebar/>
-                <main className={classes.content}>
-                    <Routes>
-                        <Route path='/' element={<News/>}/>
-                        <Route path='news' element={<News/>}/>
-                        <Route path='chat/*' element={<Chat/>} exact/>
-                        <Route path='profile' element={<Profile/>}/>
-                        <Route path='music' element={<Music/>}/>
-                        <Route path='friends' element={<Friends/>}/>
-                    </Routes>
-                </main>
+                <Header />
+                <Container maxWidth='1240'>
+                    <Sidebar />
+                    <main className={classes.content}>
+                        <Routes>
+                            <Route path='/' element={<News />} />
+                            <Route path='news' element={<News />} />
+                            <Route path='chat/*' element={<Chat />} exact />
+                            <Route path='profile' element={<Profile />} />
+                            <Route path='music' element={<Music />} />
+                            <Route path='friends' element={<Friends />} />
+                        </Routes>
+                    </main>
+                </Container>
                 {/* <Content/> */}
             </div>
-         </BrowserRouter>
+        </BrowserRouter>
     );
 }
 

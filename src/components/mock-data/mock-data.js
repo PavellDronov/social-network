@@ -81,6 +81,63 @@ const mockData = {
             <p>Пока у проекта нет названия, логотипа и посты взяты из “Пикабу” VK для минимальной наполненности.</p>`,
         },
     ],
+    dialogItems: [
+        {
+            name: 'Alexsandr Lepezin',
+            id: '1',
+        },
+        {
+            name: 'Алина Логинова',
+            id: '2',
+        },
+        {
+            name: 'Богдан Толистинов',
+            id: '3',
+        },
+        {
+            name: 'Ирина Кубракова',
+            id: '4',
+        },
+        {
+            name: 'Александр Буянов',
+            id: '5',
+        },
+        {
+            name: 'Полина Романова',
+            id: '6',
+        },
+        {
+            name: 'Анастасия Вострикова',
+            id: '7',
+        },
+    ],
+    messages: [
+        {
+            id: '1',
+            content: 'Hi, what is your name?',
+            me: false,
+        },
+        {
+            id: '2',
+            content: 'Hi, my name is Pavel',
+            me: true,
+        },
+        {
+            id: '3',
+            content: 'Oh, ok. My name is Alina.',
+            me: false,
+        },
+        {
+            id: '4',
+            content: 'Nice to meet you!',
+            me: true,
+        },
+        {
+            id: '4',
+            content: 'Me too',
+            me: false,
+        },
+    ]
 };
 
 export default mockData;
