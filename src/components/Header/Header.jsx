@@ -11,7 +11,6 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { makeStyles } from '@material-ui/core/styles';
 import icon from '../../images/social-icon.png';
 
-
 const useStylesHeader = makeStyles((theme) => ({
     appBar: {
         zIndex: theme.zIndex.drawer + 1,
@@ -24,14 +23,15 @@ const Header = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
-      setAnchorEl(event.currentTarget);
+        setAnchorEl(event.currentTarget);
     };
 
     const handleClose = () => {
-      setAnchorEl(null);
+        setAnchorEl(null);
     };
     return (
         <AppBar position='fixed' className={classes.appBar}>
+            <div className='layout'>
                 <Toolbar className='header__content'>
                     <Typography variant='h6' noWrap>
                         Network
@@ -53,17 +53,17 @@ const Header = () => {
                     >
                         {/* <MenuItem onClick={handleClose}>Profile</MenuItem> */}
                         <MenuItem onClick={handleClose}>
-                            <SettingsIcon/>
-                            <Typography variant="inherit">Настройки</Typography>
+                            <SettingsIcon />
+                            <Typography variant='inherit'>Настройки</Typography>
                         </MenuItem>
                         <MenuItem onClick={handleClose}>
-                            <ExitToAppIcon/>
-                            <Typography variant="inherit">Выйти</Typography>
+                            <ExitToAppIcon />
+                            <Typography variant='inherit'>Выйти</Typography>
                         </MenuItem>
                     </Menu>
-                    
                 </Toolbar>
-            </AppBar>
+            </div>
+        </AppBar>
     );
 };
 

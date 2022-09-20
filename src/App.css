@@ -52,115 +52,143 @@
 } */
 
 body {
-  background-color: #EDEEF0;
+    background-color: #edeef0;
+}
+
+.layout {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 24px;
+  margin: 0 auto;
 }
 
 .header__content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar {
+    position: fixed;
+    top: 24px;
+    width: 100%;
+    max-width: 280px;
+}
+
+.sidebar .sidebar-menu {
+    background-color: #fff;
+    border-radius: 8px;
 }
 
 .sidebar-menu svg {
-  fill: #3f51b5;
+    fill: #3f51b5;
 }
 
 .popup-menu svg {
-  margin-right: 10px;
-  fill: #3f51b5;
+    margin-right: 10px;
+    fill: #3f51b5;
 }
 
 .post {
-  padding: 20px;
-  margin-bottom: 30px;
-  border-radius: 3px;
-  background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: #fff;
 }
 .post:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .post__header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
 }
 
 .post__info {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 .post__author {
-  font-weight: 700;
-  color: #3f51b5;
+    font-weight: 700;
+    color: #3f51b5;
 }
 
 .post__date {
-  color: #848484;
+    color: #848484;
 }
 
 .dialog-items a {
-  color: #3f51b5;
-  transition: background-color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
+    color: #3f51b5;
+    transition: background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
 .dialog-items a:hover {
-  background-color: #c7c7c7;
+    background-color: #c7c7c7;
 }
 
 .dialog-items a.active {
-  background-color: #3f51b5;
-  color: #fff;
+    background-color: #3f51b5;
+    color: #fff;
 }
 
 .messages {
-  height: 100%;
-  padding: 10px;
-  background-color: #fff;
+    height: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
 }
 
 .messages__item {
-  width: fit-content;
-  max-width: 300px;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  background-color: rgb(156, 156, 156);
-  color: #fff;
+    width: fit-content;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: rgb(156, 156, 156);
+    color: #fff;
 }
 .messages__item--me {
-  margin: 0 auto 10px;
-  margin-right: 0;
-  background-color: #3f51b5;
+    margin: 0 auto 10px;
+    margin-right: 0;
+    background-color: #3f51b5;
 }
 
 .messages__item p {
-  margin: 0;
+    margin: 0;
 }
 
-
 .profile__block {
-  padding: 24px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  background-color: #fff;
+    padding: 24px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #fff;
 }
 
 .profile__img picture {
-  display: block;
-  position: relative;
-  height: 0;
-  padding-top: 100%;
-  overflow: hidden;
+    display: block;
+    position: relative;
+    height: 0;
+    padding-top: 100%;
+    overflow: hidden;
 }
 
 .profile__img img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile__name {
+  margin: 0 0 20px;
+  font-size: 28px;
+}
+
+.profile__posts {
+  color: #3f51b5;
 }

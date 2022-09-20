@@ -4,9 +4,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Post from '../Post/Post';
 import mockData from '../mock-data/mock-data';
 
-const posts = mockData.posts.reverse();
-
 const News = () => {
+    const posts = mockData.posts.reverse();
     return (
         <>
             <Toolbar />

@@ -9,7 +9,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Profile from './components/Profile/Profile';
 import Music from './components/Music/Music';
 import Friends from './components/Friends/Friends';
-import { Container } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -27,19 +27,35 @@ function App() {
         <BrowserRouter>
             <div className={classes.root}>
                 <Header />
-                <Container maxWidth='1240'>
-                    <Sidebar />
-                    <main className={classes.content}>
-                        <Routes>
-                            <Route path='/' element={<News />} />
-                            <Route path='news' element={<News />} />
-                            <Route path='chat/*' element={<Chat />} exact />
-                            <Route path='profile' element={<Profile />} />
-                            <Route path='music' element={<Music />} />
-                            <Route path='friends' element={<Friends />} />
-                        </Routes>
-                    </main>
-                </Container>
+                <div className='layout'>
+                    <Grid container spacing={2}>
+                        <Grid item xs={3}>
+                            <Sidebar />
+                        </Grid>
+                        <Grid item xs={9}>
+                            <main className={classes.content}>
+                                <Routes>
+                                    <Route path='/' element={<News />} />
+                                    <Route path='news' element={<News />} />
+                                    <Route
+                                        path='chat/*'
+                                        element={<Chat />}
+                                        exact
+                                    />
+                                    <Route
+                                        path='profile'
+                                        element={<Profile />}
+                                    />
+                                    <Route path='music' element={<Music />} />
+                                    <Route
+                                        path='friends'
+                                        element={<Friends />}
+                                    />
+                                </Routes>
+                            </main>
+                        </Grid>
+                    </Grid>
+                </div>
                 {/* <Content/> */}
             </div>
         </BrowserRouter>
