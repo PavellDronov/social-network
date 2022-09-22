@@ -2,14 +2,13 @@ import React from "react";
 
 import Toolbar from '@material-ui/core/Toolbar';
 import Post from '../Post/Post';
-import mockData from '../mock-data/mock-data';
 
-const News = () => {
-    const posts = mockData.posts.reverse();
+const News = ({posts}) => {
+    const newPosts = posts.reverse();
     return (
         <>
             <Toolbar />
-            {posts.map((item, index) => {
+            {newPosts.map((item) => {
                 return (
                     <Post
                         key={item.id}

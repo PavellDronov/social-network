@@ -2,10 +2,9 @@ import { Toolbar, Grid } from '@material-ui/core';
 import React from 'react';
 import profileImg from '../../images/profile-img.jpg';
 import Post from '../Post/Post';
-import mockData from '../mock-data/mock-data';
 
-const Profile = () => {
-    const posts = mockData.posts.reverse();
+const Profile = ({posts}) => {
+    const newPosts = posts.reverse();
     const profileName = 'Паша Дронов';
     return (
         <div className='profile'>
@@ -26,7 +25,7 @@ const Profile = () => {
                         <h1 className='profile__name'>{profileName}</h1>
                     </div>
                     {/* <h2 className='profile__posts'>Записи Паши</h2> */}
-                    {posts.map((item, index) => {
+                    {newPosts.map((item, index) => {
                         return (
                             <Post
                                 key={item.id}

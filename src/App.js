@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function App() {
+function App({ mockData }) {
     const classes = useStyles();
     return (
         <BrowserRouter>
@@ -35,16 +35,31 @@ function App() {
                         <Grid item xs={9}>
                             <main className={classes.content}>
                                 <Routes>
-                                    <Route path='/' element={<News />} />
-                                    <Route path='news' element={<News />} />
+                                    <Route
+                                        path='/'
+                                        element={<News posts={mockData.posts} />}
+                                    />
+                                    <Route
+                                        path='news'
+                                        element={<News posts={mockData.posts} />}
+                                    />
                                     <Route
                                         path='chat/*'
-                                        element={<Chat />}
+                                        element={
+                                            <Chat
+                                                dialogItems={
+                                                    mockData.dialogItems
+                                                }
+                                                messages={mockData.messages}
+                                            />
+                                        }
                                         exact
                                     />
                                     <Route
                                         path='profile'
-                                        element={<Profile />}
+                                        element={
+                                            <Profile posts={mockData.posts} />
+                                        }
                                     />
                                     <Route path='music' element={<Music />} />
                                     <Route
